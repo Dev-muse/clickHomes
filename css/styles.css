@@ -4,6 +4,8 @@
 :root {
   --primary: rgba(66, 101, 214, 1);
   --primary-light: rgba(173, 193, 255, 0.6);
+  --secondary: #ff5a3c;
+  --secondary-light: #f8e2de;
 }
 /* Global */
 *,
@@ -40,9 +42,9 @@ section {
   font-size: 1.7rem;
   display: inline-block;
   cursor: pointer;
-  color: var(--primary);
+  color: #fff;
   border-radius: 1rem;
-  background-color: #fff;
+  background-color: rgba(119, 119, 119, 0.5);
   -webkit-border-radius: 1rem;
   -o-border-radius: 1rem;
   -ms-border-radius: 1rem;
@@ -101,12 +103,12 @@ header span {
   height: 4.5rem;
   font-size: 2rem;
   color: var(--primary);
-  border-radius: 54% 46% 40% 60% / 40% 53% 47% 60%;
+  border-radius: 0.5rem;
   background-color: var(--primary-light);
-  -webkit-border-radius: 54% 46% 40% 60% / 40% 53% 47% 60%;
-  -o-border-radius: 54% 46% 40% 60% / 40% 53% 47% 60%;
-  -ms-border-radius: 54% 46% 40% 60% / 40% 53% 47% 60%;
-  -moz-border-radius: 54% 46% 40% 60% / 40% 53% 47% 60%;
+  -webkit-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
 }
 
 .icons #menu-bars:hover,
@@ -124,7 +126,7 @@ header span {
 
 .home {
   min-height: 100vh;
-  background: url("/images/home-bg.jpg") no-repeat center;
+  background: url("/images/bg-home.jpg") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   display: flex;
@@ -189,6 +191,68 @@ header span {
 }
 
 /* Home section end */
+
+/* Services section */
+
+.services .btn {
+  color: var(--secondary);
+  background-color: var(--secondary-light);
+}
+.services .btn:hover {
+  color: #fff;
+  background-color: var(--secondary);
+}
+
+.heading {
+  text-align: center;
+  color: #333;
+  font-size: 4rem;
+  padding-bottom: 3rem;
+}
+
+.heading span {
+  color: #fff;
+  background-color: var(--secondary);
+  padding: 0.2rem 1.5rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.box {
+  flex: 1 1 30rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 1rem;
+}
+
+.box h3 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.box p {
+  font-size: 1.5rem;
+  color: #333;
+  padding: 0.5rem 0;
+  line-height: 2;
+}
+
+/* Services section end */
 
 /* Media queries */
 @media (max-width: 991px) {

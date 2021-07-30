@@ -42,9 +42,9 @@ section {
   font-size: 1.7rem;
   display: inline-block;
   cursor: pointer;
-  color: #fff;
+  color: var(--secondary);
   border-radius: 1rem;
-  background-color: rgba(119, 119, 119, 0.5);
+  background-color: var(--secondary-light);
   -webkit-border-radius: 1rem;
   -o-border-radius: 1rem;
   -ms-border-radius: 1rem;
@@ -53,7 +53,7 @@ section {
 }
 
 .btn:hover {
-  background-color: var(--primary);
+  background-color: var(--secondary);
   color: #fff;
 }
 
@@ -81,7 +81,7 @@ header .logo {
 }
 
 header span {
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 .navbar a {
@@ -90,7 +90,7 @@ header span {
   padding: 0 1.5rem;
 }
 .navbar a:hover {
-  color: var(--primary);
+  color: var(--secondary);
   font-weight: bold;
 }
 
@@ -102,9 +102,9 @@ header span {
   line-height: 4.5rem;
   height: 4.5rem;
   font-size: 2rem;
-  color: var(--primary);
+  color: var(--secondary);
   border-radius: 0.5rem;
-  background-color: var(--primary-light);
+  background-color: var(--secondary-light);
   -webkit-border-radius: 0.5rem;
   -o-border-radius: 0.5rem;
   -ms-border-radius: 0.5rem;
@@ -114,6 +114,7 @@ header span {
 .icons #menu-bars:hover,
 .icons a:hover {
   color: #fff;
+  background-color: var(--secondary);
 }
 
 .icons #menu-bars {
@@ -147,6 +148,15 @@ header span {
   -o-border-radius: 0.5rem;
   -ms-border-radius: 0.5rem;
   -moz-border-radius: 0.5rem;
+}
+
+.home form .btn {
+  background-color: rgba(119, 119, 119, 0.5);
+  color: #fff;
+}
+.home form .btn:hover {
+  background-color: var(--secondary);
+  color: #fff;
 }
 
 .home form h3 {
@@ -194,15 +204,6 @@ header span {
 
 /* Services section */
 
-.services .btn {
-  color: var(--secondary);
-  background-color: var(--secondary-light);
-}
-.services .btn:hover {
-  color: #fff;
-  background-color: var(--secondary);
-}
-
 .heading {
   text-align: center;
   color: #333;
@@ -221,12 +222,12 @@ header span {
   -o-border-radius: 0.5rem;
 }
 
-.box-container {
+.services .box-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
 }
-.box {
+.services .box {
   flex: 1 1 30rem;
   border-radius: 0.5rem;
   -webkit-border-radius: 0.5rem;
@@ -240,12 +241,12 @@ header span {
   padding: 1rem;
 }
 
-.box h3 {
+.services .box h3 {
   font-size: 2.5rem;
   color: #333;
 }
 
-.box p {
+.services .box p {
   font-size: 1.5rem;
   color: #333;
   padding: 0.5rem 0;
@@ -253,6 +254,178 @@ header span {
 }
 
 /* Services section end */
+
+/* Featured section */
+
+.featured .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.featured .box {
+  overflow-x: hidden;
+  background-color: #fff;
+  flex: 1 1 30rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.featured .image-container {
+  overflow: hidden;
+  position: relative;
+  height: 25rem;
+  width: 100%;
+}
+
+.featured img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: 0.2s linear;
+  -webkit-transition: 0.2s linear;
+  -moz-transition: 0.2s linear;
+  -ms-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+}
+
+.featured img:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+.featured .info {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  display: flex;
+}
+.featured .info h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  margin-left: 1.3rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.featured .icons {
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+  display: flex;
+}
+
+.featured .icons a {
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-right: 1rem;
+  padding: 0 0.7rem;
+  display: flex;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.featured .icons h3 {
+  font-weight: 500;
+  padding-left: 1rem;
+}
+
+.featured .icons a:hover {
+  background-color: var(--secondary);
+}
+
+.featured .content {
+  padding: 1.5rem;
+}
+
+.featured .price {
+  display: flex;
+  align-items: center;
+}
+.featured .price h3 {
+  font-size: 2rem;
+  color: var(--secondary);
+  margin-right: auto;
+}
+.featured .price a {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-right: 0.5rem;
+  line-height: 4rem;
+  height: 4rem;
+  width: 4rem;
+  background-color: black;
+  text-align: center;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+.featured .price a:hover {
+  color: var(--secondary);
+}
+
+.featured .location {
+  padding: 1rem 0;
+}
+.featured .location h3 {
+  font-size: 2.5rem;
+  color: #333;
+}
+.featured .location p {
+  font-size: 1.5rem;
+  color: #666;
+  padding-top: 0.5em;
+  line-height: 1.5;
+}
+
+.featured .details {
+  padding: 0.5rem 0;
+  display: flex;
+}
+
+.featured .details h3 {
+  flex: 1;
+  padding: 1rem;
+  font-size: 1.3rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  color: #999;
+}
+.featured .details h3 i {
+  color: #000;
+  padding-left: 0.5rem;
+}
+
+.featured .buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.featured .buttons .btn {
+  flex: 1;
+  font-size: 1.5rem;
+}
+
+/* Featured section end */
 
 /* Media queries */
 @media (max-width: 991px) {

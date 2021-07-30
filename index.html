@@ -27,7 +27,7 @@
 
       <div class="icons">
         <div id="menu-bars" class="fas fa-bars"></div>
-        <a href="#" class="fas fa-star"></a>
+        <a href="#" onclick="bookmark(event)" class="fas fa-star"></a>
         <a href="#" class="fas fa-user"></a>
       </div>
     </header>
@@ -35,21 +35,87 @@
     <!-- Header section end -->
 
     <!-- Home section -->
+    <section id="home" class="home">
+      <form action="/">
+        <h3>Find your perfect home</h3>
+        <div class="btn-container">
+          <a href="#" class="btn">For Rent</a>
+          <a href="#" class="btn">For Sale</a>
+        </div>
+        <div class="inputBox">
+          <input type="search" placeholder="Neighborhood" />
+          <input type="search" placeholder="City" />
+          <select name="" id="">
+            <option value="" disabled selected hidden>Minimum price</option>
+            <option value="$5000">$5000</option>
+            <option value="$10000">$10000</option>
+            <option value="$15000">$15000</option>
+            <option value="$20000">$20000</option>
+            <option value="$25000">$25000</option>
+          </select>
+          <select name="" id="">
+            <option value="" disabled selected hidden>Maximum price</option>
+            <option value="$30000">$30000</option>
+            <option value="$35000">$35000</option>
+            <option value="$40000">$40000</option>
+            <option value="$45000">$45000</option>
+            <option value="$50000">$50000</option>
+          </select>
+          <select name="" id="">
+            <option value="" disabled selected hidden>Property status</option>
+            <option value="Ready to move">Ready to move</option>
+            <option value="Under construction">Under construction</option>
+            <option value="Furnished">Furnished</option>
+            <option value="Semi-Furnished">Semi-Furnished</option>
+            <option value="Unfurnished">Unfurnished</option>
+          </select>
+          <select name="" id="">
+            <option value="" disabled selected hidden>Property type</option>
+            <option value="Flat">Flat</option>
+            <option value="House">House</option>
+            <option value="Shop">Shop</option>
+            <option value="Warehouse">Warehouse</option>
+            <option value="Land">Land</option>
+          </select>
+          <select name="" id="">
+            <option value="" disabled selected hidden>BHK</option>
+            <option value="1 BHK">1 BHK</option>
+            <option value="2 BHK">2 BHK</option>
+            <option value="3 BHK">3 BHK</option>
+            <option value="4 BHK">4 BHK</option>
+            <option value="5 BHK">5 BHK</option>
+          </select>
+          <select name="" id="">
+            <option value="" disabled selected hidden>Amenities</option>
+            <option value="Parking Space">Parking Space</option>
+            <option value="Swimming Pool">Swimming Pool</option>
+            <option value="Playground">Playground</option>
+            <option value="Security">Security</option>
+            <option value="All">All</option>
+          </select>
+          <select name="" id="">
+            <option value="" disabled selected hidden>Bedrooms</option>
+            <option value="1 Bedroom">1 Bedroom</option>
+            <option value="2 Bedrooms">2 Bedrooms</option>
+            <option value="3 Bedrooms">3 Bedrooms</option>
+            <option value="4 Bedrooms">4 Bedrooms</option>
+            <option value="5 Bedrooms">5 Bedrooms</option>
+          </select>
+          <select name="" id="">
+            <option value="" disabled selected hidden>Bathrooms</option>
+            <option value="1 Bathroom">1 Bathroom</option>
+            <option value="2 Bathrooms">2 Bathrooms</option>
+            <option value="3 Bathrooms">3 Bathrooms</option>
+            <option value="4 Bathrooms">4 Bathrooms</option>
+            <option value="5 Bathrooms">5 Bathrooms</option>
+          </select>
+        </div>
 
+        <input type="button" value="Search Property" class="btn" />
+      </form>
+    </section>
     <!-- Home section end -->
 
-    <script>
-      let menu = document.getElementById("menu-bars");
-      let navbar = document.querySelector(".navbar");
-
-      menu.addEventListener("click", () => {
-        navbar.classList.toggle("active");
-        menu.classList.toggle("fa-times");
-      });
-      window.addEventListener("scroll", () => {
-        navbar.classList.remove("active");
-        menu.classList.remove("fa-times");
-      });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
